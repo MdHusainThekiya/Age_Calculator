@@ -79,7 +79,7 @@ svg{
     .header{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         width: 100vw;
         height: 9vh;
     }
@@ -90,7 +90,7 @@ svg{
         align-items: center;
         justify-content: center;
         padding: 2px;
-        margin-top: 6vh;
+        margin-top: 2vh;
         padding-bottom: 2vh;
         margin-left: 0;
         margin-right: 0;
