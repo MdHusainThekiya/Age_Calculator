@@ -21,7 +21,7 @@
 .header{
     display: flex;
     justify-content: space-between;
-    height: 20vh;
+    height: 9vh;
 }
 
 /* HEADER AREA > LOGO */
@@ -81,7 +81,7 @@ svg{
         flex-direction: column;
         justify-content: space-between;
         width: 100vw;
-        height: 9vh;
+        height: 15vh;
     }
     
     /* HEADER AREA > LOGO */
