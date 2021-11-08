@@ -178,6 +178,7 @@ svg{
     display: flex;
     list-style-type: none;
     height: 3rem;
+    margin-right: 10vw;
     margin-top: 5vh;
     justify-content: end;
     align-items: center;
