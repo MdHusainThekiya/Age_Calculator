@@ -47,19 +47,56 @@ function calculate(){
     roundoffageinmonths = Math.floor(ageinweeks/4.34524)
 
 
-
-    // differece in current day and day of birth, which is equal to ****left over days in month****
+    //*****************left over days in month*****************
+    // differece in current day and day of birth, which is equal to
+    //date of birth
     dateofbirth = document.getElementById("dob").value
+    //extract day from dob
     dayofbirth = dateofbirth.split('-')[2]
+    //extract day from current date
     currentday = element.value.split('-')[2]
-
+    //checking the date difference(sould be possitive)
     if(currentday > dayofbirth){
         differenceincurrentdayanddayofbirth = currentday - dayofbirth;
+    //as current date is less than date on birth, we have to check difference monthwise.
     } else {
-        // 'string plus number' cannot be added, so used +x + +y = z to add 2 numbers
-        differenceincurrentdayanddayofbirth = +currentday + +(dayofbirth - currentday);
+        //extracting month from current date
+        currentttmonth = element.value.split('-')[1]
+        if(currentttmonth == 1){
+            differenceincurrentdayanddayofbirth = 31-(dayofbirth-currentday)
+        }else if(currenttmonth == 2){
+            //extracting year from current date
+            currentttyear = element.value.split('-')[0]
+            //checking for leap year (which affects feb month only)
+            if(currentttyear % 4 == 0){
+                differenceincurrentdayanddayofbirth = 29-(dayofbirth-currentday)
+            }else{
+                differenceincurrentdayanddayofbirth = 28-(dayofbirth-currentday)
+            }
+        }else if(currenttmonth == 3){
+            differenceincurrentdayanddayofbirth = 31-(dayofbirth-currentday)
+        }else if(currenttmonth == 4){
+            differenceincurrentdayanddayofbirth = 30-(dayofbirth-currentday)
+        }else if(currenttmonth == 5){
+            differenceincurrentdayanddayofbirth = 31-(dayofbirth-currentday)
+        }else if(currenttmonth == 6){
+            differenceincurrentdayanddayofbirth = 30-(dayofbirth-currentday)
+        }else if(currenttmonth == 7){
+            differenceincurrentdayanddayofbirth = 31-(dayofbirth-currentday)
+        }else if(currenttmonth == 8){
+            differenceincurrentdayanddayofbirth = 31-(dayofbirth-currentday)
+        }else if(currenttmonth == 9){
+            differenceincurrentdayanddayofbirth = 30-(dayofbirth-currentday)
+        }else if(currenttmonth == 10){
+            differenceincurrentdayanddayofbirth = 31-(dayofbirth-currentday)
+        }else if(currenttmonth == 11){
+            differenceincurrentdayanddayofbirth = 30-(dayofbirth-currentday)
+        }else if(currenttmonth == 12){
+            differenceincurrentdayanddayofbirth = 31-(dayofbirth-currentday)
+        }
     }
     leftoverdaysinmonth = differenceincurrentdayanddayofbirth;
+
 
 
     // age in years
@@ -99,7 +136,7 @@ function calculate(){
     result = document.getElementById("result")
 
     // pesting result in result area
-    result.innerHTML = ["Age is: <br>","<br>", roundoffageinyears, " Years,  ", roundoffageinmonths, " Months,  ", leftoverdaysinmonth, " Days !!<br>",
+    result.innerHTML = ["Age is: <br>","<br>", roundoffageinyears, " Years,  ", leftovermonthinyears, " Months,  ", leftoverdaysinmonth, " Days !!<br>",
     "Or","<br>",roundoffageinmonths, " Months  ", leftoverdaysinmonth, " Days !!<br>",
     "Or","<br>",roundoffweeks, " Weeks  ", daysleftinweek, " Days !!<br>",
     "Or","<br>",ageinday, " Days !!<br>",
