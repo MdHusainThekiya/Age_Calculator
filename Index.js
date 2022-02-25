@@ -144,3 +144,24 @@ function calculate(){
     "Or","<br>",ageinmin, " Minutes !!<br>",
     "Or","<br>",ageinsec, " Seconds !!<br>"].join("");
 }
+
+
+
+//*****************Model of Other Calculator*****************
+// Get Model Element
+var model = document.getElementById('model');
+// Get Open Button
+var openbutton = document.getElementById('OtherCalculator');
+// Get Closed Button
+var closebutton = document.getElementById('close');
+// Listen for click
+openbutton.addEventListener('click', openmodel);
+closebutton.addEventListener('click', closemodel);
+// Function to open model
+function openmodel(){
+    model.style.display = 'flex';
+}
+// Function to close model
+function closemodel(){
+    model.style.display = 'none';
+}
