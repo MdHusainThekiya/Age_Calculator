@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+
+    <!-- CSS FILE LINKING -->
+    <link rel="stylesheet" href="Age_Calc/index_Age_Calc.css">
+
+    <!-- JavaScript FILE LINKING -->
+    <script src="Age_Calc/index_Age_Calc.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- HEADER AREA -->
+        <div class="header">
+
+            <!-- LOGO - NAME -->
+            <div class="logo">
+                <a href="">Age-Calculator.in</a>
+            </div>
+
+            <!-- NAVIGATION BAR -->
+            <div class="navigation">
+                <li>
+                    <a href="index_Age_Calc.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-house-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                            <path fill-rule="evenodd"
+                                d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                        </svg>
+                        Home
+                    </a>
+                </li>
+                <li id="OtherCalculator">
+                    <a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-tags-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                            <path
+                                d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043-7.457-7.457z" />
+                        </svg>
+                        Other Calculators
+                    </a>
+                </li>
+            </div>
+        </div>
+
+        <!-- CALCULATOR CONTAINER AREA -->
+        <div class="calculator-container">
+            <div class="calculator">
+                <div class="calc-header">
+                    <h2>Modify the Dates and Click the Calculate Button !!</h2>
+                </div>
+                <div class="date">
+                    <li>Select Date of Birth : </li>
+                    <li><input type="date" id="dob" class="dob" name="dob"></li>
+                </div>
+                <div class="date">
+                    <li>
+                        Age at the Date of :
+                    </li>
+                    <li>
+                        <input type="date" id="date" name="date">
+                    </li>
+                </div>
+                <div class="calculate">
+                    <button onclick="calculate()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bibi-calculator-fill" viewBox="0 0 16 16">
+                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm2 .5v2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0-.5.5zm0 4v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zM4.5 9a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM4 12.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zM7.5 6a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM7 9.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm.5 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM10 6.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm.5 2.5a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5h-1z"/>
+                        </svg>
+                        Calculate
+                    </button>
+                </div>
+            </div>
+            <div class="result-container">
+                <div class="calc-header">
+                    <h2>Result !!</h2>
+                </div>
+                <div class="belowheader">
+                    <div id="result" class="result">
+                        Age:<br>
+                        <br>
+                        __ Years __ Months __ Days<br>
+                        or<br> ___Months ___Days<br>
+                        or<br> _____Weeks ___Days<br>
+                        or<br> _________Days<br>
+                        or<br> _________Hours<br>
+                        or<br> ______________Minutes<br>
+                        or<br> __________________Seconds
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Model for Other Calculators -->
+    <div id="model" class="model">
+        <div id="modelforothercalc" class="model_container">
+            <div class="model_header">
+                <h2>Other Calculators</h2>
+            </div>
+            <div class="model_content">
+                <li><a href="index_Age_Calc.html">Age Calculator</a></li>
+                <li><a href="Mg_Calc/index_Mg_Calc.html">Mortgage Calculator</a></li>
+                <li><a href="">Normal Calculator</a></li>
+                <li><a href="">Unit Converter</a></li>
+            </div>
+            <div id="close" class="model_close">
+                <button>
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
