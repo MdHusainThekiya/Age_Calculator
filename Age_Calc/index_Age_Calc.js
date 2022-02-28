@@ -64,7 +64,7 @@ function calculate(){
         currentttmonth = element.value.split('-')[1]
         if(currentttmonth == 1){
             differenceincurrentdayanddayofbirth = 31-(dayofbirth-currentday)
-        }else if(currenttmonth == 2){
+        }else if(currentttmonth == 2){
             //extracting year from current date
             currentttyear = element.value.split('-')[0]
             //checking for leap year (which affects feb month only)
@@ -73,25 +73,25 @@ function calculate(){
             }else{
                 differenceincurrentdayanddayofbirth = 28-(dayofbirth-currentday)
             }
-        }else if(currenttmonth == 3){
+        }else if(currentttmonth == 3){
             differenceincurrentdayanddayofbirth = 31-(dayofbirth-currentday)
-        }else if(currenttmonth == 4){
+        }else if(currentttmonth == 4){
             differenceincurrentdayanddayofbirth = 30-(dayofbirth-currentday)
-        }else if(currenttmonth == 5){
+        }else if(currentttmonth == 5){
             differenceincurrentdayanddayofbirth = 31-(dayofbirth-currentday)
-        }else if(currenttmonth == 6){
+        }else if(currentttmonth == 6){
             differenceincurrentdayanddayofbirth = 30-(dayofbirth-currentday)
-        }else if(currenttmonth == 7){
+        }else if(currentttmonth == 7){
             differenceincurrentdayanddayofbirth = 31-(dayofbirth-currentday)
-        }else if(currenttmonth == 8){
+        }else if(currentttmonth == 8){
             differenceincurrentdayanddayofbirth = 31-(dayofbirth-currentday)
-        }else if(currenttmonth == 9){
+        }else if(currentttmonth == 9){
             differenceincurrentdayanddayofbirth = 30-(dayofbirth-currentday)
-        }else if(currenttmonth == 10){
+        }else if(currentttmonth == 10){
             differenceincurrentdayanddayofbirth = 31-(dayofbirth-currentday)
-        }else if(currenttmonth == 11){
+        }else if(currentttmonth == 11){
             differenceincurrentdayanddayofbirth = 30-(dayofbirth-currentday)
-        }else if(currenttmonth == 12){
+        }else if(currentttmonth == 12){
             differenceincurrentdayanddayofbirth = 31-(dayofbirth-currentday)
         }
     }
